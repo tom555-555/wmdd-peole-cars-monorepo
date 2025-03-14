@@ -97,6 +97,14 @@ const PersonCard = ({ person }) => {
         <h3>
           {person.firstName} {person.lastName}
         </h3>
+        <div className="button-group">
+          <button onClick={handleEdit} className="edit-button">
+            Edit Person
+          </button>
+          <button onClick={handleDelete} className="delete-button">
+            Delete Person
+          </button>
+        </div>
       </div>
       <div className="card-body">
         {person.cars.map((car) => (
@@ -107,14 +115,6 @@ const PersonCard = ({ person }) => {
         <Link to={`/people/${person.id}`} className="learn-more">
           Learn More
         </Link>
-        <div className="button-group">
-          <button onClick={handleEdit} className="edit-button">
-            Edit
-          </button>
-          <button onClick={handleDelete} className="delete-button">
-            Delete
-          </button>
-        </div>
       </div>
     </div>
   );
