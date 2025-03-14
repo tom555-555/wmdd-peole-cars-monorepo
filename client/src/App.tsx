@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import PersonShow from "./components/PersonShow";
 import { RouterProvider } from "react-router/dom";
 
-// Apollo Clientの設定
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql",
   cache: new InMemoryCache({
